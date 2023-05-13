@@ -21,7 +21,15 @@ const server = http.createServer((request, response) => {
   else if (request.url == "/css/homepage.css") {
     let path = "css/homepage.css";
     route(path, response, 200, "text/css");
-  } else {
+  } 
+  
+   // JAVASCRIPT ROUTES
+   else if (request.url == "/js/homepage.js") {
+    let path = "js/homepage.js";
+    route(path, response, 200, "text/javascript");
+  } 
+  
+  else {
     let path = "html/notFound.html";
     route(path, response, 401, "text/html");
   }
